@@ -4,7 +4,7 @@ let dayCounter = getDayCounter();
 let intervalId;
 let lastCompletedDay = getLastCompletedDay(); // Track the last completed day, retrieved from localStorage
 let timeoutId; // To hold the timeout ID for the day change timer
-const changeTime = "21:37"; // Set the time for the day change in HH:MM format
+const changeTime = "21:46"; // Set the time for the day change in HH:MM format
 
 // Array of motivational messages (one for each of the 45 days)
 const motivationalMessages = [
