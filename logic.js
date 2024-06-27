@@ -392,7 +392,7 @@ function updateMotivationalMessage() {
 
     } else {
         // boxInfo.textContent = "Keep going! Every small step you take brings you closer to your goals. Stay focused, stay positive, and never give up. You've got this!"; // Set default message if no tasks completed today
-        boxInfo.textContent = "dude you can do it !"; // Set default message if no tasks completed today
+        boxInfo.textContent = "testing bro"; // Set default message if no tasks completed today
     }
 }
 
