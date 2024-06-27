@@ -4,7 +4,7 @@ let dayCounter = getDayCounter();
 let intervalId;
 let lastCompletedDay = getLastCompletedDay(); // Track the last completed day, retrieved from localStorage
 let timeoutId; // To hold the timeout ID for the day change timer
-const changeTime = "16:30"; // Set the time for the day change in HH:MM format
+const changeTime = "18:05"; // Set the time for the day change in HH:MM format
 
 // Array of motivational messages (one for each of the 45 days)
 const motivationalMessages = [
@@ -391,7 +391,8 @@ function updateMotivationalMessage() {
         boxInfo.textContent = motivationalMessages[lastCompletedDay - 1];
 
     } else {
-        boxInfo.textContent = "Keep going! Every small step you take brings you closer to your goals. Stay focused, stay positive, and never give up. You've got this!"; // Set default message if no tasks completed today
+        // boxInfo.textContent = "Keep going! Every small step you take brings you closer to your goals. Stay focused, stay positive, and never give up. You've got this!"; // Set default message if no tasks completed today
+        boxInfo.textContent = "dude you can do it !"; // Set default message if no tasks completed today
     }
 }
 
