@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>45 Day Challenge</title>
+  <style>
+    /* CSS styles */
+    .container {
+      text-align: center;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Day Challenge</h1>
+    <p id="dayCount"></p>
+    <p id="remainingTime"></p>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Check if the start date is already stored in localStorage
+      if (!localStorage.getItem('startDate')) {
+        // If not, set the current date and time as the start date
+        localStorage.setItem('startDate', new Date().toISOString());
+      }
+
+      updateDayCount(); // Update day count on page load
+
+      // Update day count and remaining time every second
+      setInterval(updateDayCount, 1000);
+
+      function updateDayCount() {
+        // Get the start date from localStorage
+        const startDate = new Date(localStorage.getItem('startDate'));
+        const now = new Date(); // Get the current date and time
+
+        const timeDiff = now.getTime() - startDate.getTime(); // Calculate the time difference in milliseconds
+        const minuteDiff = Math.floor(timeDiff / (1000 * 60)); // Convert time difference to minutes
+        const dayCount = Math.floor(minuteDiff / 20) + 1; // Calculate the day count (1 day = 20 minutes)
+
+        // Check if day count is more than 45 days
+        if (dayCount > 45) {
+          // Stop updating the day count and remaining time if it exceeds 45 days
+          document.getElementById('dayCount').textContent = `Day 45`;
+          document.getElementById('remainingTime').textContent = `Challenge Completed`;
+          return; // Exit the function
+        }
+
+        const minutesInCurrentDay = minuteDiff % 20; // Calculate the minutes passed in the current "day"
+        const remainingSeconds = 20 * 60 - (timeDiff % (20 * 60 * 1000)) / 1000; // Calculate remaining seconds until the next "day"
+
+        const remainingMinutes = Math.floor(remainingSeconds / 60); // Calculate remaining minutes
+        const remainingSecs = Math.floor(remainingSeconds % 60); // Calculate remaining seconds
+
+        // Update the day count display
+        document.getElementById('dayCount').textContent = `Day ${dayCount}`;
+        // Update the remaining time display in minutes and seconds
+        document.getElementById('remainingTime').textContent = `Next day in ${remainingMinutes} minute(s) and ${remainingSecs} second(s)`;
+      }
+    });
+  </script>
+</body>
+</html>
