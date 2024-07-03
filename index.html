@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAMARTH JOSHI</title>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+  <!--font awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!--css file-->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div id="customConfirm" class="confirm-modal">
+    <div class="confirm-content">
+      <label for="t-warning" class="toast-icon icon-warning"></label>
+      <p>Are you sure?</p>
+      <p>This action cannot be undone.</p>
+      <p>The day starts from Day 1. You have lost your record.</p>
+      <div class="confirm-buttons">
+        <button id="confirmYes"><span class="icon">&#x2714;</span>Yes</button>
+        <button id="confirmNo"><span class="icon">&#x2716;</span>No</button>
+      </div>
+    </div>
+  </div>
+  <section class="sidebar">
+    <a href="https://github.com/joshi-samarth" class="logo">
+      <i class="fa-solid fa-user-tie"></i>
+      <span class="text">Samarth Joshi</span>
+    </a>
+
+    <ul class="side-menu top">
+      <li class="active">
+        <a href="index.html" class="nav-link">
+          <i class="fas fa-border-all"></i>
+          <span class="text">Dashboard</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="content">
+    <nav>
+      <i class="fas fa-bars menu-btn"></i>
+      <form>
+        <div class="form-input">
+          <input type="text" id="new-task-input" placeholder="Add a new task" />
+          <button type="button" class="search-btn" onclick="addTask()">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <input type="checkbox" hidden id="delete-mode" /> <!--delete toggle button -->
+          <label for="delete-mode" class="delete-mode"></label>
+
+          <button type="button" id="reset-btn" class="reset-btn">
+            Reset
+          </button>
+        </div>
+      </form>
+
+    </nav>
+
+    <main>
+      <div class="head-title">
+        <div class="left">
+          <h1>45-day manifest challenge</h1>
+          <ul class="breadcrumb">
+            <li>
+              <h1>45 DAYS</h1>
+            </li>
+            <i class="fas fa-chevron-right"></i>
+            <li>
+              <h1 class="active">Day 1</h1>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="box-info">
+        <li>
+          <span class="text">
+            <h3 id="motivational-message">Tomorrow marks the beginning of your amazing journey! Prepare yourself for
+              growth, challenges, and triumphs. Believe in your potential, stay dedicated, and remember that the
+              decision to begin is the first step toward greatness. Let's make this challenge a success!</h3>
+
+          </span>
+        </li>
+      </div>
+
+      <div class="table-data">
+        <div class="order">
+          <div class="head">
+            <h3>YOUR DAILY TASKS</h3>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <ul id="list-container"></ul>
+              </tr>
+            </thead>
+          </table>
+        </div>
+
+        <div class="todo">
+          <div class="head">
+            <h3>YOUR STREAK</h3>
+          </div>
+
+          <div class="todo-list">
+
+          </div>
+        </div>
+      </div>
+    </main>
+  </section>
+
+  <script src="logic.js"></script>
+  <script src="todo.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
