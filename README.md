@@ -6,9 +6,9 @@ https://joshi-samarth.github.io/45-day-manifest-challenge/
 
 `Important Note:`
 
-This website stores all data in local storage. Once the challenge starts, do not clear your browser data, as this will delete all progress. Additionally, use the same browser to track your progress. If you use a different browser, it will create a new challenge, just like starting from scratch.
+This website stores all data in local storage. Once the challenge starts, do not clear your browser data, as this will delete all progress. Additionally, use the same browser to track your progress. If you use a different browser, it will create a new challenge, just like starting from scratch.<hr>
 
-I created the 45-day challenge for the following reasons:
+<h1>I created the 45-day challenge for the following reasons:</h1>
 
 1. **Goal Setting and Achievement**: Encourages participants to set clear, achievable goals and work towards them consistently over 45 days.
 
