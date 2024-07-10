@@ -37,4 +37,5 @@ These elements together make the 45-day challenge a powerful tool for personal g
 
 `4. Daily Reset:`
    - If a participant fails to complete even a single task on any given day, the challenge will reset to day 1 the following day.
+   - If all tasks are completed for the day, the next day will start at midnight. At midnight, all task completions for that day will be unchecked, allowing participants to start fresh for the new day.
 
