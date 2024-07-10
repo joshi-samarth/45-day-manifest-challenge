@@ -4,9 +4,9 @@ You can see the demo at the link below. If you want to use the 45-day challenge,
 
 https://joshi-samarth.github.io/45-day-manifest-challenge/
 
-`Important Note:
+`Important Note:`
 
-This website stores all data in local storage. Once the challenge starts, do not clear your browser data, as this will delete all progress. Additionally, use the same browser to track your progress. If you use a different browser, it will create a new challenge, just like starting from scratch.`
+This website stores all data in local storage. Once the challenge starts, do not clear your browser data, as this will delete all progress. Additionally, use the same browser to track your progress. If you use a different browser, it will create a new challenge, just like starting from scratch.
 
 I created the 45-day challenge for the following reasons:
 
